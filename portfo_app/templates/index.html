@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Portfolio</title>
+	<meta charset="utf-8">
+	<meta name='viewport' content="width= device-width, initial-scale=1">
+	<meta name='Description' content="Zechariah Adebayo\'s site">
+	<link rel="stylesheet" type="text/css" href="../static/css/style.css">
+	<link rel= 'icon' type= 'img/icon' href='../static/images/ZEDTEK.png'>
+</head>
+<!-- header begins -->
+<header class='header'>
+	<div id="logo"><img src='../static/images/ZEDTEK.png' type='img/png' class='logo' alt='logo'><div class="logo-txt">Zedtek</div></div>
+	<ul class="large-screen">
+		<li class='navigation-item'><a href='#' class='home'><i class="fas fa-home"></i> Home</a></li>
+		<li class='navigation-item'><a href='#'><i class="fab fa-blogger"></i> Blog</a></li>
+		<li class='navigation-item'><a href='#flex-cont'><i class="fas fa-project-diagram"></i> Project</a></li>
+		<li class='navigation-item'><a href='#contact'><i class="fas fa-phone-square-alt"></i> Get in touch</a></li>
+		<li class='navigation-item Resume'><a href='#'><i class="far fa-file"></i> Resume</a></li>
+	</ul>
+	<!-- toggle hamburger -->
+	<div class="hamburger" onclick="clickDiv()">
+		<div class="child-ham"></div>
+		<div class="child-ham"></div>
+		<div class="child-ham"></div>
+	</div>
+</header>
+<!-- a separate nav for mobile-->
+<div class="mobile">
+	<!-- Now to the items for display onclick of the hamburger -->
+	<ul class='modile-nav'>
+		<li class='navigation-item'><a href='#'><i class="fas fa-home"></i> Home</a></li>
+		<li class='navigation-item'><a href='#'><i class="fab fa-blogger"></i> Blog</a></li>
+		<li class='navigation-item'><a href='#flex-cont'><i class="fas fa-project-diagram"></i> Project</a></li>
+		<li class='navigation-item'><a href='#contact'><i class="fas fa-phone-square-alt"></i> Get in touch</a></li>
+		<li class='navigation-item Resume'><a href='#'><i class="far fa-file"></i> Resume</a></li>
+	</ul>
+</div>
+<!-- --------------------------------------------------- -->
+<!--body begins-->
+<body style='width:100vw;'>
+	<div class="body-items">
+		<!--first items to describe me, including my photo-->
+		<div class="description-hero">
+			<div class="description left">
+				<div class='personal-details'> 
+					<span id="greeting"><div id="hi">Hi</div>there</span>
+					<p class="bio-writing"><span class="I">I</span> am Zechariah</span>, a passionate software developer who's concerned
+					with solving real-world problems with my software development skills.<br>
+					Being an <em>intuitive</em> type, I like burrowing into the core of any concepts
+					and problems, so as to gain the overall knowledge of it, and to come up with a
+					better approach for a solution.<br>
+					My Strength, however, is more on the backend side of software development.</p>
+				</div>
+				<div class="details-for-mobile">
+					I am Zechariah Adebayo
+				</div>
+			</div>
+			<!-- my image -->
+			<img src='../static/images/zech.jpg' alt='me' id="my-photo">
+			<!-- something to fill this up as a background-->
+			<div class="hero-bg">
+
+			</div>
+		</div>
+
+		<!--stacks-->
+		<div class='stack-head'>Skills</div>
+		<div class="cool-bg-img">
+			<div class="bg-img">
+				<!--for the purpose of Opacity -->
+			</div>
+			<div class="stack">
+				<p>Python</p>
+				<img src="../static/images/python.png" id='stack' alt='python'>
+			</div>
+			<div class="stack">
+				<p>JavaScript</p>
+				<img src="../static/images/javascript.png" id='stack' alt='JavaScript'>
+			</div>
+			<div class="stack">
+				<p>HTML</p>
+				<img src="../static/images/html.png" id='stack' alt='HTML'>
+			</div>
+			<div class="stack">
+				<p>CSS</p>
+				<img src="../static/images/css.png" id='stack' alt='CSS'>
+			</div>
+			<div class="stack">
+				<p>React</p>
+				<img src="" id='stack' alt='React'>
+			</div>
+			<div class="stack">
+				<p>Django</p>
+				<img src="" id='stack' alt='Django'>
+			</div>
+		</div>
+		<div class="flex-cont" id="flex-cont">
+			<!-- the project section -->
+			<div class='project-tag' id="project-tag">
+				<h1>Projects</h1>
+			</div>
+			<div class="projects">
+				<div class="proj">
+					<a href=''>
+						<img src="../static/images/team01.jpg" id='project' alt='project'>
+						<p id='proj-dscr'>This is project One</p>
+					</a>
+				</div>
+				<div class="proj">
+					<a href=''>
+						<img src="../static/images/team01.jpg" id='project' alt='project'>
+						<p id='proj-dscr'>This is project Two</p>
+					</a>
+				</div>
+				<div class='proj'>
+					<a href=''>
+						<img src="../static/images/team01.jpg" id='project' alt='project'>
+						<p id='proj-dscr'>This is project Three</p>
+					</a>
+				</div>
+				<div class='proj'>
+					<a href=''>
+						<img src="../static/images/team01.jpg" id='project' alt='project'>
+						<p id='proj-dscr'>This is project Four</p>
+					</a>
+				</div>
+				<div class='proj'>
+					<a href=''>
+						<img src="../static/images/team01.jpg" id='project' alt='project'>
+						<p id='proj-dscr'>This is project Five</p>
+					</a>
+				</div>
+				<div class='proj'>
+					<a href=''>
+						<img src="../static/images/team01.jpg" id='project' alt='project'>
+						<p id='proj-dscr'>This is project Six</p>
+					</a>
+				</div>
+			</div>
+		</div>
+		
+		<div class="contact" id='contact'>
+			<h1 id='contact-text'>Contact</h1>
+			<hr id='underline-cont'> 
+			<form action="" method="POST" id='form'>
+				{%csrf_token%}
+				<label for="name">Name*:</label><input type='text' name='name' value='' placeholder="your full name..." required><br>
+				<label for="email">Email*:</label><input type='email' name='Email' value='' placeholder="your email..." required><br>
+				<label for="number">Number:</label><input type='digits' name='tel' value='' placeholder="your number, beginning with the country code..." pattern='[0-9]{3}-[0-9]{2}-[0-9]{3}'><br>
+				<label for="message">Message to me:</label><textarea name="message" id="" cols="30" rows="10" placeholder='Send me a text here...'></textarea><br>
+				<button class='btn' type="submit" name='submit'><i class="fas fa-phone-square-alt"></i> Get in touch!</button>
+			</form>
+		</div>
+	</div>
+	<script src="https://kit.fontawesome.com/b7a792697d.js" crossorigin="anonymous"></script>
+	<script src='../static/js/script.js'></script>
+</body>
+<footer>
+	<div class="footer">
+		<p class="designer"><h4>Designed By <a href="https://github.io/zedtek-me" class="github"> Zechariah Adebayo</a></h4></p>
+		<p id="copy-wright">Copywright | zedtek 2021</p>
+		<div class="quick-links">
+			<p class="reach-me">You can contact me through the following platforms as well...</p>
+			<div class="links">
+				<a href="https://github.com/zedtek-me" class="git-hub">Git-hub</a>
+				<a href="https://linkedin.com" class="linkedIn">linkedIn</a>
+				<a href="https://twitter.com" class="twitter">Twitter</a>
+			</div>
+		</div>
+	</div>
+</footer>
+</html>
