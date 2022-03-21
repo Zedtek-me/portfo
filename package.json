@@ -12,5 +12,5 @@
   "dependencies": {
     "particle": "^0.1.4"
   }, 
-  "type": "module"
+  "type": "modules"
 }

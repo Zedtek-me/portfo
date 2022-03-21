@@ -1,7 +1,7 @@
 // for particles
-import {particle} from '../../../node_modules'
+// import {particle} from '../../../node_modules'
 
-console.log(typeof particle)
+// console.log(typeof particle)
 
 
 // for navbar toggle

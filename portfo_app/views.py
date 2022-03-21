@@ -1,18 +1,22 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import redirect, render
 from django.contrib import messages
 
 # Create your views here.
 
 def index(request):
-    if request.method == "POST":
-        print(request.POST)
-        name= request.POST.get('name')
+    if request.method == 'POST':
+        name = request.POST.get('name')
         email= request.POST.get('Email')
-        num= request.POST.get('tel')
-        mgs= request.POST.get('message')
-        messages.success(request, 'your information has been sent. thnaks!')
-        return redirect('')
-    else:
-        msg=  messages.get_messages(request)
-        return render(request, 'index.html', {'msg': msg})
+        tel= request.POST.get('tel')
+        msg = request.POST.get('message')
+        messages.success(request, f'thank you for reaching out, {name}! Your message has been sent to me; \n I\'ll check through it soon.')
+        print(request.POST)
+        return render(request, 'index.html')
+    msg= messages.get_messages(request)
+    if msg:
+        print('message: ', msg)
+    return render(request, 'index.html', {'msgs': msg})
+    
+
+        
 
