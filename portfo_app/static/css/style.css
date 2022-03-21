@@ -26,6 +26,17 @@ header{
 
 /* for larger screen here */
 
+/* the flash messages */
+.success{
+    background-color: lightgreen;
+    width:fit-content;
+    height: fit-content;
+    padding:10px;
+    border-radius:20px;
+    color: black;
+    font-weight: 100;
+}
+
 /* the logo div */
 #logo{
     display: flex;

@@ -143,7 +143,7 @@
 		<div class="contact" id='contact'>
 			<h1 id='contact-text'>Contact</h1>
 			<hr id='underline-cont'> 
-			<form action="" method="POST" id='form'>
+			<form action="{%url 'index'%}" method="POST" id='form'>
 				{%csrf_token%}
 				<label for="name">Name*:</label><input type='text' name='name' value='' placeholder="your full name..." required><br>
 				<label for="email">Email*:</label><input type='email' name='Email' value='' placeholder="your email..." required><br>
