@@ -33,20 +33,20 @@
 		<li class='navigation-item'><a href='#'><i class="fab fa-blogger"></i> Blog</a></li>
 		<li class='navigation-item'><a href='#flex-cont'><i class="fas fa-project-diagram"></i> Project</a></li>
 		<li class='navigation-item'><a href='#contact'><i class="fas fa-phone-square-alt"></i> Get in touch</a></li>
-		<li class='navigation-item Resume'><a href='#'><i class="far fa-file"></i> Resume</a></li>
+		<li class='navigation-item Resume'><a href='base.html' download><i class="far fa-file"></i> Resume</a></li>
 	</ul>
 </div>
 <!-- --------------------------------------------------- -->
 <!--body begins-->
 <body style='width:100vw;'>
 	<div class="body-items">
-		{%if msgs%}
-			{%for msg in msgs%}
-				<div class="{{msg.tags}}"msg.>{{msg}}</div>
-			{%endfor%}
-		{%endif%}
 		<!--first items to describe me, including my photo-->
 		<div class="description-hero">
+			{%if msgs%}
+				{%for msg in msgs%}
+					<div class="{{msg.tags}}">{{msg}}</div>
+				{%endfor%}
+			{%endif%}
 			<div class="description left">
 				<div class='personal-details'> 
 					<span id="greeting"><div id="hi">Hi</div>there</span>
