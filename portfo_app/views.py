@@ -11,10 +11,8 @@ def index(request):
         msg = request.POST.get('message')
         messages.success(request, f'thank you for reaching out, {name}! Your message has been sent to me; \n I\'ll check through it soon.')
         print(request.POST)
-        return render(request, 'index.html')
+        return redirect('index')
     msg= messages.get_messages(request)
-    if msg:
-        print('message: ', msg)
     return render(request, 'index.html', {'msgs': msg})
     
 
