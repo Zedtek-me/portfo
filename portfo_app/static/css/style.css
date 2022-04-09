@@ -28,7 +28,7 @@ header{
 
 /* the flash messages */
 .success{
-    background-color: lightblue;
+    background-color: lightgreen;
     margin:5px;
     width:fit-content;
     height: fit-content;

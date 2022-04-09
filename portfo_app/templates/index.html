@@ -42,11 +42,6 @@
 	<div class="body-items">
 		<!--first items to describe me, including my photo-->
 		<div class="description-hero">
-			{%if msgs%}
-				{%for msg in msgs%}
-					<div class="{{msg.tags}}">{{msg}}</div>
-				{%endfor%}
-			{%endif%}
 			<div class="description left">
 				<div class='personal-details'> 
 					<span id="greeting"><div id="hi">Hi</div>there</span>
@@ -141,6 +136,11 @@
 		</div>
 		
 		<div class="contact" id='contact'>
+			{%if msgs%}
+				{%for msg in msgs%}
+					<div class="{{msg.tags}}">{{msg}}</div>
+				{%endfor%}
+			{%endif%}
 			<h1 id='contact-text'>Contact</h1>
 			<hr id='underline-cont'> 
 			<form action="" method="POST" id='form'>
