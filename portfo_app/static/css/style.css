@@ -155,7 +155,7 @@ body{
     margin:auto;
     animation-name: image-animation;
     animation-duration: 2s;
-    animation-timing-function:steps();
+    animation-timing-function:ease-in-out;
     animation-iteration-count: infinite;
     transition:all 2s;
     z-index:500;

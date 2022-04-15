@@ -9,7 +9,7 @@ def index(request):
         email= request.POST.get('Email')
         tel= request.POST.get('tel')
         msg = request.POST.get('message')
-        messages.success(request, f'thank you for reaching out, {name}! Your message has been sent to me; \n I\'ll check through it soon.')
+        messages.success(request, f'Thank you for reaching out, {name}! Your message has been sent to me; \n I\'ll check through it soon.')
         print(request.POST)
         return redirect('index')
     msg= messages.get_messages(request)
