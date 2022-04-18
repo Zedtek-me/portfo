@@ -15,6 +15,3 @@ def index(request):
     msg= messages.get_messages(request)
     return render(request, 'index.html', {'msgs': msg})
     
-
-        
-
