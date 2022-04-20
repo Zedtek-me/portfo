@@ -8,7 +8,7 @@ def index(request):
         name = request.POST.get('name')
         email= request.POST.get('Email')
         tel= request.POST.get('tel')
-        msg = request.POST.get('message')
+        msgs = request.POST.get('message')
         messages.success(request, f'Thank you for reaching out, {name}! Your message has been sent to me; \n I\'ll check through it soon.')
         print(request.POST)
         return redirect('index')
