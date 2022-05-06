@@ -155,7 +155,7 @@ body{
     border-radius: 50%;
     margin:auto;
     animation-name: image-animation;
-    animation-duration: 10s;
+    animation-duration:8s;
     animation-timing-function:ease-in-out;
     animation-iteration-count: infinite;
     transition:all 2s;
