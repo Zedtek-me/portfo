@@ -625,7 +625,7 @@ footer{
     .mobile-nav{
         display:flex;
         list-style: none;
-        flex-flow: column wrap;
+        flex-direction: column;
         justify-content: space-around;
         align-items: flex-start;
         align-self: flex-start;
