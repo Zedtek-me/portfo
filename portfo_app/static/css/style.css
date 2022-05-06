@@ -115,7 +115,7 @@ body{
 /* parent container */
 .description-hero{
     display:flex;
-    flex-flow: row wrap;
+    flex-flow: row nowrap;
     justify-content: center;
     align-items: center;
     background-color: black;
@@ -148,13 +148,14 @@ body{
 
 /* my image within */
 #my-photo{
+    align-self: center;
     width:25%;
     height:45%;
     border:solid 4px black;;
     border-radius: 50%;
     margin:auto;
     animation-name: image-animation;
-    animation-duration: 2s;
+    animation-duration: 10s;
     animation-timing-function:ease-in-out;
     animation-iteration-count: infinite;
     transition:all 2s;
@@ -164,16 +165,18 @@ body{
 
 /* the first container to the left */
 .left{
+    align-self: center;
     display: flex;
     flex-flow: column wrap;
     justify-content: center;
     align-items: center;
-    color:white;
+    color:black;
     max-width:50%;
     height:fit-content;
     padding:7px;
     margin-bottom:40%;
     z-index:500;
+    margin:auto;
 }
 
 .details-for-mobile{
@@ -501,16 +504,16 @@ footer{
 /* for animations */
 @keyframes image-animation{
     0%{
-        margin-top:10px;
+        transform: translateY(0px);
     }
     25%{
-        margin-top:7px;
+        transform: translateY(20px);
     }
     50%{
-        margin-top:5px;
+        transform: translateY(25px);
     }
     100%{
-        margin-top:0px;
+        transform: translateY(0px);
     }
 }
 
