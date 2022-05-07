@@ -24,18 +24,18 @@
 		<div class="child-ham"></div>
 		<div class="child-ham"></div>
 	</div>
+	<!-- a separate nav for mobile-->
+	<div class="for-mobile">
+		<!-- Now to the items for display onclick of the hamburger -->
+		<ul class='nav-m'>
+			<li class='navigation-item'><a href='#'><i class="fas fa-home"></i> Home</a></li>
+			<li class='navigation-item'><a href='#'><i class="fab fa-blogger"></i> Blog</a></li>
+			<li class='navigation-item'><a href='#flex-cont'><i class="fas fa-project-diagram"></i> Project</a></li>
+			<li class='navigation-item'><a href='#contact'><i class="fas fa-phone-square-alt"></i> Get in touch</a></li>
+			<li class='navigation-item Resume'><a href='base.html' download><i class="far fa-file"></i> Resume</a></li>
+		</ul>
+	</div>
 </header>
-<!-- a separate nav for mobile-->
-<div class="for-mobile">
-	<!-- Now to the items for display onclick of the hamburger -->
-	<ul class='nav-m mobile-nav'>
-		<li class='navigation-item'><a href='#'><i class="fas fa-home"></i> Home</a></li>
-		<li class='navigation-item'><a href='#'><i class="fab fa-blogger"></i> Blog</a></li>
-		<li class='navigation-item'><a href='#flex-cont'><i class="fas fa-project-diagram"></i> Project</a></li>
-		<li class='navigation-item'><a href='#contact'><i class="fas fa-phone-square-alt"></i> Get in touch</a></li>
-		<li class='navigation-item Resume'><a href='base.html' download><i class="far fa-file"></i> Resume</a></li>
-	</ul>
-</div>
 <!-- --------------------------------------------------- -->
 <!--body begins-->
 <body style='width:100vw;'>
@@ -138,7 +138,10 @@
 		<div class="contact" id='contact'>
 			{%if msgs%}
 				{%for msg in msgs%}
-					<div class="{{msg.tags}}">{{msg}}</div>
+					<div class="{{msg.tags}}">
+						{{msg}}
+						<i class="fa-solid fa-xmark"></i>
+					</div>
 				{%endfor%}
 			{%endif%}
 			<h1 id='contact-text'>Contact</h1>

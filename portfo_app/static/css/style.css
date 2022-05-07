@@ -28,6 +28,8 @@ header{
 
 /* the flash messages */
 .success{
+    display: flex;
+    justify-content: space-between;
     background-color: lightgreen;
     margin:5px;
     width:fit-content;
@@ -512,6 +514,9 @@ footer{
     50%{
         transform: translateY(25px);
     }
+    75%{
+        transform: translateY(20px);
+    }
     100%{
         transform: translateY(0px);
     }
@@ -608,18 +613,19 @@ footer{
     .mobile{
         display:flex;
         flex-direction: column;
-        height:50%;
+        height:300%;
         width:80%;
+        list-style: none;
         justify-content:center;
         align-items: flex-start;
         position: absolute;
-        top:80px;
-        left: 20%;
+        top:0;
+        left: 30%;
         right:0;
-        bottom:10%;
+        bottom:0;
         background-color: black;
         border-radius: 10px;
-        z-index: 1000;
+        z-index: 500;
     }
 
     .mobile-nav{
@@ -630,7 +636,7 @@ footer{
         align-items: flex-start;
         align-self: flex-start;
     }
-    li > a{
+    li > a, .mobile-nav>li a{
         color: rgb(228, 228, 27);
         text-decoration: none;
         margin:8px;

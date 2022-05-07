@@ -13,7 +13,16 @@ const clickDiv= ()=>{
 }
 
 
+const removeMsg= ()=>{
+    let xIcon= document.querySelector('.fa-xmark')
+    let contactCont= document.querySelector('.contact')
+    let successCont= document.querySelector('.success')
+    xIcon.addEventListener('click', (e)=>{
+        contactCont.removeChild(successCont)
+    })
+}
 
+removeMsg()
 // animation
 
 var y= 0
