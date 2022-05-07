@@ -12,7 +12,7 @@ const clickDiv= ()=>{
     mobileNav.classList.toggle('mobile-nav')
 }
 
-
+// removing feedback flash messages
 const removeMsg= ()=>{
     let xIcon= document.querySelector('.fa-xmark')
     let contactCont= document.querySelector('.contact')
@@ -22,7 +22,6 @@ const removeMsg= ()=>{
     })
 }
 
-removeMsg()
 // animation
 
 var y= 0
@@ -56,3 +55,4 @@ function animate2(){
 // I didn't do it that way cuz javascript could not let me use the "length" attribute on a function parameter-- it raised TypeError
 animate1()
 animate2()
+removeMsg()
