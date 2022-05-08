@@ -185,7 +185,22 @@ body{
     display: none;
 }
 .for-mobile{
-    display: none;
+    display:flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: flex-start;
+    width:100%;
+    height: fit-content;
+    padding:15px;
+    position: absolute;
+    top:0;
+    left: 150%;
+    right:0;
+    bottom:0;
+    background-color: black;
+    border-radius: 10px;
+    transition: all 1s ease-in-out;
+    z-index: 500;
 }
 .left + .personal-details{
     display: flex;
@@ -611,26 +626,14 @@ footer{
     }
 
     .mobile{
-        display:flex;
-        flex-direction: column;
-        height:300%;
-        width:80%;
-        list-style: none;
-        justify-content:center;
-        align-items: flex-start;
-        position: absolute;
-        top:0;
-        left: 30%;
-        right:0;
-        bottom:0;
-        background-color: black;
-        border-radius: 10px;
-        z-index: 500;
+       left: 30%;
     }
 
     .mobile-nav{
         display:flex;
         list-style: none;
+        height:100%;
+        width:100%;
         flex-direction: column;
         justify-content: space-around;
         align-items: flex-start;
