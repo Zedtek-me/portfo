@@ -56,3 +56,12 @@ function animate2(){
 animate1()
 animate2()
 removeMsg()
+
+window.onload= function(){
+    Particles.init({
+        selector: '.background',
+        color: '#ffffff',
+        sizeVariations:5,
+        connectParticles:true,
+    })
+}

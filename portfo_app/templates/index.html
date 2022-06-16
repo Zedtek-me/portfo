@@ -38,7 +38,7 @@
 </header>
 <!-- --------------------------------------------------- -->
 <!--body begins-->
-<body>
+<body class="body">
 	<div class="body-items">
 		<!--first items to describe me, including my photo-->
 		<div class="description-hero">
@@ -158,6 +158,7 @@
 		</div>
 		
 		<div class="contact" id='contact'>
+			<canvas class="background" style="cursor:pointer;"></canvas>
 			{%if msgs%}
 				{%for msg in msgs%}
 					<div class="{{msg.tags}}">
@@ -180,6 +181,7 @@
 	</div>
 	<script src="https://kit.fontawesome.com/c676ebde69.js" crossorigin="anonymous"></script>
 	<script src='../static/js/script.js'></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.3/particles.min.js" integrity="sha512-jq8sZI0I9Og0nnZ+CfJRnUzNSDKxr/5Bvha5bn7AHzTnRyxUfpUArMzfH++mwE/hb2efOo1gCAgI+1RMzf8F7g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </body>
 <footer>
 	<div class="footer">
