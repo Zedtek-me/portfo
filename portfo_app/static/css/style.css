@@ -702,7 +702,7 @@ footer{
 
     /* the projects section */
     .projects{
-        grid-row-gap:5px;
+        grid-row:-5px;
     }
     .proj{
         width:100%;
@@ -731,7 +731,7 @@ footer{
     /* form */
     #form> input{
         width:70%;
-        height:25px;
+        height:35px;
     }
 
     .btn{
