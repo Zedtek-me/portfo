@@ -126,3 +126,11 @@ STATICFILES_DIRS = [os.path.join(BASE_DIR, 'portfo_app/static'), os.path.join(BA
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+# email setups using Google SMTP server
+EMAIL_BACKEND= 'django.core.mail.backends.smtp.EmailBackend'
+DEFAULT_FROM_EMAIL= 'zedtek@portfolio.com'
+EMAIL_HOST= 'smtp.gmail.com'
+EMAIL_PORT= 465
+EMAIL_HOST_USER= os.environ.get('EMAIL_USER')
+EMAIL_HOST_PASSWORD=os.environ.get('EMAIL_PASSWORD')
+EMAIL_USE_SSL= True
