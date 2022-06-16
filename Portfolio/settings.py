@@ -23,9 +23,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = os.environ.get('PORTFO_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -82,6 +82,9 @@ DATABASES = {
     },
 }
 
+import dj_database_url
+db_settings_for_heroku= dj_database_url.config(conn_max_age=500)
+DATABASES['default'].update(db_settings_for_heroku)
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
@@ -121,6 +124,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'portfo_app/static'), os.path.join(BASE_DIR, 'blog/static')]
+STATIC_ROOT= os.path.join(BASE_DIR, 'static')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
