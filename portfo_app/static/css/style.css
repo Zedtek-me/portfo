@@ -376,7 +376,6 @@ body{
 .projects{
     display:grid;
     grid-template-columns: repeat(2, 50%);
-    /* grid-gap:5px; */
     margin:auto;
     align-self: center;
     width:100%;
@@ -625,6 +624,7 @@ footer{
         animation:none;
         width:50%;
         height:50%;
+        margin-top: 10px;
         border-radius:50%;
     }
 
@@ -701,6 +701,9 @@ footer{
     }
 
     /* the projects section */
+    .projects{
+        grid-row-gap:5px;
+    }
     .proj{
         width:100%;
         height:100%;
@@ -710,7 +713,9 @@ footer{
         width:100%;
         height:50%;
     }
-
+    .project-name{
+        font-size: 15px;
+    }
     #proj-dscr{
         font-weight: 100;
         font-size:15px;
