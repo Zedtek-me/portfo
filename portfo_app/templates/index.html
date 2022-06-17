@@ -6,12 +6,12 @@
 	<meta charset="utf-8">
 	<meta name='viewport' content="width= device-width, initial-scale=1">
 	<meta name='Description' content="Zechariah Adebayo's site">
-	<link rel="stylesheet" type="text/css" href="{%static '/static/css/style.css'}">
-	<link rel= 'icon' type= 'img/icon' href="{%static '/static/images/ZEDTEK.png'%}">
+	<link rel="stylesheet" type="text/css" href="../static/portfo_app/css/style.css">
+	<link rel= 'icon' type= 'img/icon' href="../static/portfo_app/images/ZEDTEK.png">
 </head>
 <!-- header begins -->
 <header class='header'>
-	<div id="logo"><img src='../static/images/ZEDTEK.png' type='img/png' class='logo' alt='logo'><div class="logo-txt">Zedtek</div></div>
+	<div id="logo"><img src='../static/portfo_app/images/ZEDTEK.png' type='img/png' class='logo' alt='logo'><div class="logo-txt">Zedtek</div></div>
 	<ul class="large-screen">
 		<li class='navigation-item'><a href='#' class='home'><i class="fas fa-home"></i> Home</a></li>
 		<li class='navigation-item'><a href="{%url 'blog-index'%}"><i class="fab fa-blogger"></i> Blog</a></li>
@@ -53,7 +53,7 @@
 				</div>
 			</div>
 			<!-- my image -->
-			<img src='../static/images/zech.jpg' alt='me' id="my-photo">
+			<img src='../static/portfo_app/images/zech.jpg' alt='me' id="my-photo">
 			<!-- something to fill this up as a background-->
 			<div class="hero-bg">
 
@@ -68,19 +68,19 @@
 			</div>
 			<div class="stack">
 				<p>Python</p>
-				<img src="../static/images/python.png" id='stack' alt='python'>
+				<img src="../static/portfo_app/images/python.png" id='stack' alt='python'>
 			</div>
 			<div class="stack">
 				<p>JavaScript</p>
-				<img src="../static/images/javascript.png" id='stack' alt='JavaScript'>
+				<img src="../static/portfo_app/images/javascript.png" id='stack' alt='JavaScript'>
 			</div>
 			<div class="stack">
 				<p>HTML</p>
-				<img src="../static/images/html.png" id='stack' alt='HTML'>
+				<img src="../static/portfo_app/images/html.png" id='stack' alt='HTML'>
 			</div>
 			<div class="stack">
 				<p>CSS</p>
-				<img src="../static/images/css.png" id='stack' alt='CSS'>
+				<img src="../static/portfo_app/images/css.png" id='stack' alt='CSS'>
 			</div>
 			<div class="stack">
 				<p>React</p>
@@ -100,7 +100,7 @@
 				<div class="proj">
 					<a href=''>
 						<h1 class="project-name">CHATTUP</h1>
-						<img src="../static/images/home_page_login.PNG" id='project' alt='project'>
+						<img src="../static/portfo_app/images/home_page_login.PNG" id='project' alt='project'>
 						<p id='proj-dscr'>
 							A web-based chat and social media application, built using Django, DjangoChannels, 
 							Websocket API/protocol, Redis and channel layers(for scope visibility of connected users. 
@@ -111,7 +111,7 @@
 				<div class="proj">
 					<a href='https://ecomarp.herokuapp.com'>
 						<h1 class="project-name">ECOMMERCE</h1>
-						<img src="../static/images/E_com_home_large_screen.PNG" id='project' alt='project'>
+						<img src="../static/portfo_app/images/E_com_home_large_screen.PNG" id='project' alt='project'>
 						<p id='proj-dscr'>
 							An Ecommerce application for a home appliance niche-- beds for babys.
 							Anyone can purchase products anonymously, without having to signup in the app.
@@ -124,7 +124,7 @@
 				<div class='proj'>
 					<a href='https://zechariah.pythonanywhere.com'>
 						<h1 class="project-name">REST API</h1>
-						<img src="../static/images/initial_rest_api_home.PNG" id='project' alt='project'>
+						<img src="../static/portfo_app/images/initial_rest_api_home.PNG" id='project' alt='project'>
 						<p id='proj-dscr'>
 							One of the earliest Rest Api I built using Django Rest Framework.
 							It only accepts POST and GET Http methods.
@@ -135,7 +135,7 @@
 				<div class='proj'>
 					<a href=''>
 						<h1 class="project-name">TekNooz</h1>
-						<img src="../static/images/teknooz_homepage.PNG" id='project' alt='project'>
+						<img src="../static/portfo_app/images/teknooz_homepage.PNG" id='project' alt='project'>
 						<p id='proj-dscr'>
 							It's an app that consumes the Hacker-news API in order to render real-time news to visitors.
 							Visitors can filter news by type of it, and they can as well search out news using certain keywords.
@@ -159,7 +159,6 @@
 		</div>
 		
 		<div class="contact" id='contact'>
-			<canvas class="background" style="cursor:pointer;"></canvas>
 			{%if msgs%}
 				{%for msg in msgs%}
 					<div class="{{msg.tags}}">
@@ -181,7 +180,7 @@
 		</div>
 	</div>
 	<script src="https://kit.fontawesome.com/c676ebde69.js" crossorigin="anonymous"></script>
-	<script src='../static/js/script.js'></script>
+	<script src='../static/portfo_app/js/script.js'></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.3/particles.min.js" integrity="sha512-jq8sZI0I9Og0nnZ+CfJRnUzNSDKxr/5Bvha5bn7AHzTnRyxUfpUArMzfH++mwE/hb2efOo1gCAgI+1RMzf8F7g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </body>
 <footer>
