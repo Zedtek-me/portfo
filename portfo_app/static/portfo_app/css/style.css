@@ -735,6 +735,11 @@ footer{
         width:70%;
     }
 
+    #msg{
+        background-color: white;
+        color: black;
+    }
+
     /* footer section */
 
     .designer, #copy-wright{
