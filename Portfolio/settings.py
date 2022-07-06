@@ -38,7 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'portfo_app.apps.PortfoAppConfig',
-    'blog'
+    'blog',
 ]
 
 MIDDLEWARE = [

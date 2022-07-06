@@ -1,7 +1,6 @@
-// for particles
-// import {particle} from '../../../node_modules'
+particles= require('particle')
 
-// console.log(typeof particle)
+console.log(typeof particle)
 
 
 // for navbar toggle
