@@ -1,6 +1,7 @@
-particles= require('particle')
+// for particles
+// import {particle} from '../../../node_modules'
 
-console.log(typeof particle)
+// console.log(typeof particle)
 
 
 // for navbar toggle
@@ -50,17 +51,17 @@ function animate2(){
 }
 
 // writing the above functions separately is redundant, because they pretty much do the same thing.
-// A better approach would have being: giving my function 2 parameters-- 1 for the the actual text, the other for the container to insert the text during iteration.
-// I didn't do it that way cuz javascript could not let me use the "length" attribute on a function parameter-- it raised TypeError
+// A better approach would have been: giving my function 2 parameters-- 1 for the the actual text, the other for the container to insert the text during iteration.
+// I didn't do that way cuz javascript could not let me use the "length" attribute on a function parameter-- it raised TypeError
 animate1()
 animate2()
 removeMsg()
 
-window.onload= function(){
-    Particles.init({
-        selector: '.background',
-        color: '#ffffff',
-        sizeVariations:5,
-        connectParticles:true,
-    })
-}
+// window.onload= function(){
+//     Particles.init({
+//         selector: '.background',
+//         color: '#ffffff',
+//         sizeVariations:5,
+//         connectParticles:true,
+//     })
+// }
