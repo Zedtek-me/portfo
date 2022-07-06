@@ -39,6 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'portfo_app.apps.PortfoAppConfig',
     'blog',
+    'compressor',
+    'compressor_toolkit',
 ]
 
 MIDDLEWARE = [
@@ -126,6 +128,11 @@ USE_TZ = True
 STATIC_URL = 'static/'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'portfo_app/static'), os.path.join(BASE_DIR, 'blog/static')]
 STATIC_ROOT= os.path.join(BASE_DIR, 'static')
+STATICFILE_FINDERS= [
+    'django.contrib.staticfiles.finders.FileSystemFinder',
+    'django.contrib.staticfile.finders.AppDirectoriesFinder',
+    'compressor.finders.CompressorFinder',
+]
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
@@ -139,3 +146,20 @@ EMAIL_PORT= 465
 EMAIL_HOST_USER= os.environ.get('EMAIL_USER')
 EMAIL_HOST_PASSWORD=os.environ.get('EMAIL_PASSWORD')
 EMAIL_USE_SSL= True
+
+
+# django compressor settings here
+COMPRESS_CSS_FILTERS = [
+    'compressor.filters.css_default.CssAbsoluteFilter',
+    'compressor.filters.cssmin.CSSMinFilter',
+    'compressor.filters.template.TemplateFilter'
+]
+COMPRESS_JS_FILTERS = [
+    'compressor.filters.jsmin.JSMinFilter',
+]
+COMPRESS_PRECOMPILERS = (
+    ('module', 'compressor_toolkit.precompilers.ES6Compiler'),
+    ('css', 'compressor_toolkit.precompilers.SCSSCompiler'),
+)
+COMPRESS_ENABLED = True
+COMPRESS_OFFLINE= True
